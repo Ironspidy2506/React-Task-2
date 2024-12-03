@@ -21,7 +21,7 @@ This document provides an overview of a simple React project focused on creating
 1. **Creating the Counter Component**:
    - The counter component initializes the counter state with a default value.
    - Two buttons are provided: one to increase the counter and another to decrease it.
-
+<br/>
    ```javascript
    const [counter, setCounter] = useState(0);
    ```
@@ -29,7 +29,7 @@ This document provides an overview of a simple React project focused on creating
 2. **Button Click Handlers**:
    - The `addValue` function increments the counter when the "Add Value" button is clicked.
    - The `removeValue` function decrements the counter when the "Remove Value" button is clicked.
-
+<br/>
    ```javascript
    const addValue = () => {
        setCounter(counter + 1);
@@ -42,7 +42,7 @@ This document provides an overview of a simple React project focused on creating
 
 3. **Rendering the Component**:
    - The component renders the current counter value and the buttons for interaction.
-
+<br/>
    ```javascript
    return (
        <div>
