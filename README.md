@@ -70,6 +70,34 @@ This document provides an overview of a simple React project focused on creating
 
 - Implement logic to prevent the counter from going below zero when using the "Remove Value" button.
 - Limit the counter to a maximum value (e.g., 20) when using the "Add Value" button.
+- What happens if we use multiple setCounter in the function? 
+- Answer to the above question is, The setCounter method is sent as a batch to the UI for updation, so intead of updating the value multiple times it will do the updation only once on the particular element, but we know that setCounter or any other setter methods accept a callback function as an argument and it will do all the updates and then send it to the UI for updation such as,
+
+```javascript
+   let count = 0;
+
+   const addValue = () => {
+    setCount(count + 1);
+    setCount(count + 1);
+    setCount(count + 1);
+    setCount(count + 1);
+  };
+
+  // The final output sent to the UI will be 1.
+   ```
+
+   ```javascript
+   let count = 0;
+
+   const addValue = () => {
+    setCount(count => count + 1);
+    setCount(count => count + 1);
+    setCount(count => count + 1);
+    setCount(count => count + 1);
+  };
+
+  // The final output sent to the UI will be 4.
+   ```
 
 ## Conclusion
 
